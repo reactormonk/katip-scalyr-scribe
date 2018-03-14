@@ -1,0 +1,45 @@
+name:                katip-scalyr-scribe
+version:             0.1.0.0
+github:              "reactormonk/katip-scalyr-scribe"
+license:             BSD3
+author:              "Simon Hafner"
+maintainer:          "hafnersimon@gmail.com"
+copyright:           "2018 Simon Hafner"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            A katip scribe for logging to json
+# category:            Logging
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/reactormonk/katip-scalyr-scribe#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- katip
+- aeson
+- unordered-containers
+- scientific
+- text
+
+default-extensions:
+- OverloadedStrings
+
+library:
+  source-dirs: src
+
+tests:
+  katip-json-scribe-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - katip-scalyr-scribe
