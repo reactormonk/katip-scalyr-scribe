@@ -1,5 +1,5 @@
 name:                katip-scalyr-scribe
-version:             0.1.0.0
+version:             0.1.0.1
 github:              "reactormonk/katip-scalyr-scribe"
 license:             BSD3
 author:              "Simon Hafner"
@@ -21,11 +21,11 @@ description:         Please see the README on Github at <https://github.com/reac
 
 dependencies:
 - base >= 4.7 && < 5
-- katip
-- aeson
-- unordered-containers
-- scientific
-- text
+- katip >= 0.5 && <0.6
+- aeson >= 1.0 && <1.4
+- unordered-containers >= 0.2 && < 0.3
+- scientific >= 0.3 && < 0.4
+- text >= 1.2 && < 1.3
 
 default-extensions:
 - OverloadedStrings
